@@ -119,7 +119,6 @@ This project is for educational purposes. Feel free to modify and use it under a
 
 ## Acknowledgments
 - Data inspired by Company XYZ's supermarket operations.
-- Built with guidance from xAI's Grok 3 on June 24, 2025.
 
 ---
 

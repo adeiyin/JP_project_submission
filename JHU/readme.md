@@ -4,7 +4,7 @@ Below is a detailed summary of the Jupyter Notebook project (`jhu.ipynb`) conver
 
 # COVID-19 Global Data Analysis Project
 
-This project analyzes global COVID-19 data, focusing on confirmed cases, deaths, and recoveries, with a specific visualization for daily new confirmed cases in Nigeria. The analysis is performed using a Jupyter Notebook with Python, leveraging libraries such as `pandas` for data manipulation, `seaborn` and `matplotlib` for visualizations, and `requests` with `BeautifulSoup` for potential web scraping (though not fully utilized in the current code). The data is sourced from time-series CSV files provided by Johns Hopkins University (JHU).
+This project analyzes global COVID-19 data, focusing on confirmed cases, deaths, and recoveries, with a specific visualization for daily new confirmed cases in Nigeria. The analysis is performed using a Jupyter Notebook with Python, leveraging libraries such as `pandas` for data manipulation, `seaborn` and `matplotlib` for visualizations. The data is sourced from time-series CSV files provided by Johns Hopkins University (JHU).
 
 ## Project Overview
 
@@ -61,7 +61,7 @@ This project analyzes global COVID-19 data, focusing on confirmed cases, deaths,
 ### 4. Data Processing and Visualization
 - **Task**: Calculate and visualize daily new confirmed cases for Nigeria.
 - **Implementation**:
-  - Assumed a variable `nigeria_confirmed` was created (not shown in the notebook), likely by filtering the `confirmed` DataFrame for Nigeria (e.g., `nigeria_confirmed = confirmed[confirmed['Country/Region'] == 'Nigeria'].iloc[:, 4:].sum()` to aggregate daily counts).
+  - `nigeria_confirmed` was created by filtering the `confirmed` DataFrame for Nigeria (e.g., `nigeria_confirmed = confirmed[confirmed['Country/Region'] == 'Nigeria'].iloc[:, 4:].sum()` to aggregate daily counts).
   - Calculated daily new cases with `daily_new_cases = nigeria_confirmed.diff().fillna(0)`, where `diff()` computes the difference between consecutive days, and `fillna(0)` handles the first day's `NaN`.
   - Created a scatter plot with:
     - `plt.figure(figsize=(12, 6))` for a 12x6 inch figure.
@@ -91,7 +91,6 @@ This project analyzes global COVID-19 data, focusing on confirmed cases, deaths,
 ## Results and Insights
 - **Data Structure**: The dataset spans over three years, covering 289 countries with cumulative counts of confirmed cases, deaths, and recoveries.
 - **Nigeria Trends**: The scatter plot of daily new cases reveals variability, with potential peaks during major waves (e.g., 2020-2021 surges), though specific insights depend on the full `nigeria_confirmed` data.
-- **Limitations**: The notebook lacks the step to filter Nigeria data, and the `requests`/`BeautifulSoup` imports are unused, suggesting incomplete implementation.
 
 ## Future Improvements
 - **Filter Nigeria Data**: Explicitly define `nigeria_confirmed` (e.g., `nigeria_confirmed = confirmed[confirmed['Country/Region'] == 'Nigeria'].iloc[:, 4:].sum()`).

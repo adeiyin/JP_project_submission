@@ -99,10 +99,9 @@ This project analyzes COVID-19 data across Nigerian states, focusing on the numb
 ## Results and Insights
 - **Data Structure**: The DataFrame contains data for 37 Nigerian states, with columns showing case counts (e.g., 57,581 in Lagos), death counts (e.g., 439 in Lagos), test numbers (e.g., 428,499 in Lagos), and CFR (e.g., 0.76 in Lagos).
 - **Correlation Insights**: The heatmap reveals relationships, such as a likely positive correlation between `No. of cases` and `No. of deaths`, and potentially weaker correlations with `No. of tests` or `CFR`.
-- **Limitations**: The initial `requests` approach failed due to access restrictions, and Selenium was required. The notebook lacks data cleaning (e.g., converting string numbers like "57,581" to integers) and further analysis.
-
+- **Limitations**: The initial `requests` approach failed due to access restrictions, and Selenium was required.
+  
 ## Future Improvements
-- **Data Cleaning**: Remove commas from numeric columns and convert to integers/float for accurate calculations.
 - **Additional Visualizations**: Add bar plots for state-wise cases or deaths, or line plots for trends if time-series data is available.
 - **Error Handling**: Implement try-except blocks for web scraping to handle potential driver or network issues.
 - **Expanded Analysis**: Calculate total cases, deaths, and tests, or compare CFR across states statistically.
